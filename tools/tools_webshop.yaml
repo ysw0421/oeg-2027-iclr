@@ -1,0 +1,40 @@
+tools:
+  - name: search
+    schema:
+      type: object
+      properties:
+        query: {type: string}
+      required: [query]
+    policy:
+      requires_confirmation: false
+      idempotent: true
+
+  - name: click
+    schema:
+      type: object
+      properties:
+        item_id: {type: string}
+      required: [item_id]
+    policy:
+      requires_confirmation: false
+      idempotent: true
+
+  - name: add_to_cart
+    schema:
+      type: object
+      properties:
+        item_id: {type: string}
+      required: [item_id]
+    policy:
+      requires_confirmation: true
+      idempotent: false
+
+  - name: checkout
+    schema:
+      type: object
+      properties:
+        payment_method: {type: string}
+      required: [payment_method]
+    policy:
+      requires_confirmation: true
+      idempotent: false

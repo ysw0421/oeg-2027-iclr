@@ -1,21 +1,6 @@
-# Python
 __pycache__/
 *.pyc
 .venv/
-venv/
+.env
 
-# OS / IDE
-.DS_Store
-.vscode/
-.idea/
-
-# Experiment outputs
 runs/
-plots/*.png
-plots/*.pdf
-
-# Data (optional: keep raw data out)
-data/raw/
-paper_source/
-
-oeg.patch

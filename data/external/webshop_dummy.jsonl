@@ -1,0 +1,3 @@
+{"episode_id":"e1","success":1,"actions":[{"action":"search","args":{"query":"wireless mouse"}},{"action":"add_to_cart","args":{"item_id":"A123"},"confirmed":false},{"action":"checkout","args":{"payment_method":"card"},"confirmed":false}]}
+{"episode_id":"e2","success":1,"actions":[{"action":"search","args":{"query":"usb hub"}},{"action":"add_to_cart","args":{"item_id":"B222","extra":"x"},"confirmed":true},{"action":"checkout","args":{"payment_method":"card","meta":"x"},"confirmed":true}]}
+{"episode_id":"e3","success":0,"actions":[{"action":"click","args":{"item_id":"C777"}},{"action":"checkout","args":{},"confirmed":true}]}
