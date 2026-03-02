@@ -1,0 +1,12 @@
+{
+  "tool_hallucination": 5.0,
+  "schema_missing": 2.0,
+  "schema_type": 2.0,
+  "schema_extra_field": 1.0,
+  "precondition_failure": 3.0,
+  "postcondition_failure": 3.0,
+  "policy_missing_confirmation": 12.0,
+  "duplicate_side_effect": 5.0,
+  "tool_not_implemented": 1.0,
+  "precondition_unknown": 1.0
+}

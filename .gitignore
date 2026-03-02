@@ -17,3 +17,5 @@ plots/*.pdf
 # Data (optional: keep raw data out)
 data/raw/
 paper_source/
+
+oeg.patch

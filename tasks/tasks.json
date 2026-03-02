@@ -1,5 +1,36 @@
 [
   {"task_id":"pay_001","instruction":"Charge exactly once: 10 USD for reason 'test'.","criteria":{"type":"charges_exactly","count":1,"amount":10,"currency":"USD"}},
   {"task_id":"pay_002","instruction":"Charge exactly once: 25 USD for reason 'subscription'.","criteria":{"type":"charges_exactly","count":1,"amount":25,"currency":"USD"}},
-  {"task_id":"pay_003","instruction":"Charge exactly once: 10000 KRW for reason 'order'.","criteria":{"type":"charges_exactly","count":1,"amount":10000,"currency":"KRW"}}
+  {"task_id":"pay_003","instruction":"Charge exactly once: 10000 KRW for reason 'order'.","criteria":{"type":"charges_exactly","count":1,"amount":10000,"currency":"KRW"}},
+  {"task_id":"pay_004","instruction":"Charge exactly once: 5 USD for reason 'coffee'.","criteria":{"type":"charges_exactly","count":1,"amount":5,"currency":"USD"}},
+  {"task_id":"pay_005","instruction":"Charge exactly once: 49 USD for reason 'upgrade'.","criteria":{"type":"charges_exactly","count":1,"amount":49,"currency":"USD"}},
+  {"task_id":"pay_006","instruction":"Charge exactly once: 1200 JPY for reason 'ticket'.","criteria":{"type":"charges_exactly","count":1,"amount":1200,"currency":"JPY"}},
+  {"task_id":"pay_007","instruction":"Charge exactly once: 1999 INR for reason 'renewal'.","criteria":{"type":"charges_exactly","count":1,"amount":1999,"currency":"INR"}},
+  {"task_id":"pay_008","instruction":"Charge exactly once: 15 EUR for reason 'book'.","criteria":{"type":"charges_exactly","count":1,"amount":15,"currency":"EUR"}},
+  {"task_id":"pay_009","instruction":"Charge exactly once: 3000 KRW for reason 'snack'.","criteria":{"type":"charges_exactly","count":1,"amount":3000,"currency":"KRW"}},
+  {"task_id":"pay_010","instruction":"Charge exactly once: 80 USD for reason 'hardware'.","criteria":{"type":"charges_exactly","count":1,"amount":80,"currency":"USD"}},
+
+  {"task_id":"refund_001","instruction":"Refund exactly once for charge_id 'will_be_used_by_agent'.","criteria":{"type":"refunds_exactly","count":1}},
+  {"task_id":"refund_002","instruction":"Refund exactly once for charge_id 'will_be_used_by_agent'.","criteria":{"type":"refunds_exactly","count":1}},
+  {"task_id":"refund_003","instruction":"Refund exactly once for charge_id 'will_be_used_by_agent'.","criteria":{"type":"refunds_exactly","count":1}},
+  {"task_id":"refund_004","instruction":"Refund exactly once for charge_id 'will_be_used_by_agent'.","criteria":{"type":"refunds_exactly","count":1}},
+  {"task_id":"refund_005","instruction":"Refund exactly once for charge_id 'will_be_used_by_agent'.","criteria":{"type":"refunds_exactly","count":1}},
+
+  {"task_id":"email_001","instruction":"Send exactly one email to alice@example.com with subject 'hello'.","criteria":{"type":"emails_sent_exactly","count":1,"to":"alice@example.com","subject":"hello"}},
+  {"task_id":"email_002","instruction":"Send exactly one email to bob@example.com with subject 'invoice'.","criteria":{"type":"emails_sent_exactly","count":1,"to":"bob@example.com","subject":"invoice"}},
+  {"task_id":"email_003","instruction":"Send exactly one email to carol@example.com with subject 'meeting'.","criteria":{"type":"emails_sent_exactly","count":1,"to":"carol@example.com","subject":"meeting"}},
+  {"task_id":"email_004","instruction":"Send exactly one email to dave@example.com with subject 'status'.","criteria":{"type":"emails_sent_exactly","count":1,"to":"dave@example.com","subject":"status"}},
+  {"task_id":"email_005","instruction":"Send exactly one email to erin@example.com with subject 'update'.","criteria":{"type":"emails_sent_exactly","count":1,"to":"erin@example.com","subject":"update"}},
+
+  {"task_id":"email_006","instruction":"Send exactly two identical emails to frank@example.com with subject 'ping'.","criteria":{"type":"emails_sent_exactly","count":2,"to":"frank@example.com","subject":"ping"}},
+  {"task_id":"email_007","instruction":"Send exactly two identical emails to grace@example.com with subject 'reminder'.","criteria":{"type":"emails_sent_exactly","count":2,"to":"grace@example.com","subject":"reminder"}},
+  {"task_id":"email_008","instruction":"Send exactly two identical emails to hank@example.com with subject 'notice'.","criteria":{"type":"emails_sent_exactly","count":2,"to":"hank@example.com","subject":"notice"}},
+  {"task_id":"email_009","instruction":"Send exactly two identical emails to ivy@example.com with subject 'followup'.","criteria":{"type":"emails_sent_exactly","count":2,"to":"ivy@example.com","subject":"followup"}},
+  {"task_id":"email_010","instruction":"Send exactly two identical emails to jack@example.com with subject 'confirm'.","criteria":{"type":"emails_sent_exactly","count":2,"to":"jack@example.com","subject":"confirm"}},
+
+  {"task_id":"event_001","instruction":"Create exactly one event titled 'sync' from 2026-03-10T10:00 to 2026-03-10T10:30.","criteria":{"type":"events_created_exactly","count":1,"title":"sync","start":"2026-03-10T10:00","end":"2026-03-10T10:30"}},
+  {"task_id":"event_002","instruction":"Create exactly one event titled 'demo' from 2026-03-11T14:00 to 2026-03-11T15:00.","criteria":{"type":"events_created_exactly","count":1,"title":"demo","start":"2026-03-11T14:00","end":"2026-03-11T15:00"}},
+  {"task_id":"event_003","instruction":"Create exactly one event titled 'review' from 2026-03-12T09:00 to 2026-03-12T09:45.","criteria":{"type":"events_created_exactly","count":1,"title":"review","start":"2026-03-12T09:00","end":"2026-03-12T09:45"}},
+  {"task_id":"event_004","instruction":"Create exactly one event titled 'lunch' from 2026-03-12T12:00 to 2026-03-12T13:00.","criteria":{"type":"events_created_exactly","count":1,"title":"lunch","start":"2026-03-12T12:00","end":"2026-03-12T13:00"}},
+  {"task_id":"event_005","instruction":"Create exactly one event titled '1on1' from 2026-03-13T16:00 to 2026-03-13T16:30.","criteria":{"type":"events_created_exactly","count":1,"title":"1on1","start":"2026-03-13T16:00","end":"2026-03-13T16:30"}}
 ]
