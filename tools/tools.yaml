@@ -1,0 +1,77 @@
+version: 0.1
+
+tools:
+  - name: send_email
+    schema:
+      required: [to, subject, body]
+      properties:
+        to: {type: string}
+        subject: {type: string}
+        body: {type: string}
+    contract:
+      preconditions:
+        - type: "email_valid"
+          field: "to"
+      postconditions:
+        - type: "email_sent"
+      side_effect:
+        idempotent: false
+        cost_level: medium
+    policy:
+      requires_confirmation: false
+
+  - name: create_event
+    schema:
+      required: [title, start, end]
+      properties:
+        title: {type: string}
+        start: {type: string} # ISO-like
+        end: {type: string}
+    contract:
+      preconditions:
+        - type: "time_order"
+          start_field: "start"
+          end_field: "end"
+      postconditions:
+        - type: "event_created"
+      side_effect:
+        idempotent: true
+        cost_level: low
+    policy:
+      requires_confirmation: false
+
+  - name: charge_card
+    schema:
+      required: [amount, currency, reason]
+      properties:
+        amount: {type: number}
+        currency: {type: string}
+        reason: {type: string}
+    contract:
+      preconditions:
+        - type: "amount_positive"
+          field: "amount"
+      postconditions:
+        - type: "charge_recorded"
+      side_effect:
+        idempotent: false
+        cost_level: high
+    policy:
+      requires_confirmation: true
+
+  - name: refund_charge
+    schema:
+      required: [charge_id]
+      properties:
+        charge_id: {type: string}
+    contract:
+      preconditions:
+        - type: "charge_exists"
+          field: "charge_id"
+      postconditions:
+        - type: "refund_recorded"
+      side_effect:
+        idempotent: false
+        cost_level: medium
+    policy:
+      requires_confirmation: true
